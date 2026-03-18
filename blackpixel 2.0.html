@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>BlackPixel Studio</title>
+    
+    <!-- Verificación de Google -->
+    <meta name="google-site-verification" content="Vq5IUo7Xjlgk_gkes7Wwh9Rfu1Nr0h-DdNFBTG5ChHY" />
 
     <style>
         * {
@@ -20,10 +23,9 @@
             flex-direction: column;
         }
 
-        /* HEADER */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 20px 40px;
         }
 
         .logo-container {
@@ -46,20 +48,36 @@
             margin-top: 10px;
         }
 
-        /* CONTENIDO */
+        .btn-trabajos {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #7C4DFF;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-trabajos:hover {
+            background: #5e35b1;
+            transform: scale(1.05);
+        }
+
         main {
             flex: 1;
             padding: 40px 20px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
         }
 
         section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         h2 {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border-bottom: 2px solid #fff;
             display: inline-block;
             padding-bottom: 5px;
@@ -79,7 +97,35 @@
             margin-bottom: 10px;
         }
 
-        /* FOOTER */
+        /* TRABAJOS */
+        .trabajos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .trabajo-card {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .trabajo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(124, 77, 255, 0.4);
+        }
+
+        .trabajo-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .trabajo-card p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
         footer {
             background-color: #111;
             padding: 30px 20px;
@@ -109,57 +155,111 @@
             color: #aaa;
         }
     </style>
+    
 </head>
 
 <body>
 
-    <header>
-        <!-- LOGO SVG -->
-        <div class="logo-container">
-            <svg width="50" height="50" viewBox="0 0 100 100">
-                <rect x="10" y="10" width="30" height="30" fill="#00AEEF"/>
-                <rect x="60" y="10" width="30" height="30" fill="#7C4DFF"/>
-                <rect x="10" y="60" width="30" height="30" fill="#FFFFFF"/>
-                <rect x="60" y="60" width="30" height="30" fill="#111111"/>
-            </svg>
+<header>
+    <div class="logo-container">
+        <svg width="50" height="50" viewBox="0 0 100 100">
+            <rect x="10" y="10" width="30" height="30" fill="#00AEEF"/>
+            <rect x="60" y="10" width="30" height="30" fill="#7C4DFF"/>
+            <rect x="10" y="60" width="30" height="30" fill="#FFFFFF"/>
+            <rect x="60" y="60" width="30" height="30" fill="#111111"/>
+        </svg>
+        <div class="logo-text">BLACKPIXEL</div>
+    </div>
 
-            <div class="logo-text">BLACKPIXEL</div>
+    <div class="subtitle">STUDIO · Diseño Web & Digital</div>
+
+    <a href="#trabajos" class="btn-trabajos">Nuestros trabajos</a>
+</header>
+
+<main>
+
+    <section>
+        <h2>Sobre mí</h2>
+        <p>
+            Soy diseñador de páginas web y creador de <strong>BlackPixel Studio</strong>.
+            Me especializo en desarrollar sitios modernos, rápidos y profesionales,
+            adaptados a cualquier dispositivo.
+        </p>
+    </section>
+
+    <section>
+        <h2>Servicios</h2>
+        <ul>
+            <li>✔ Diseño de páginas web</li>
+            <li>✔ Landing pages</li>
+            <li>✔ Páginas para negocios</li>
+            <li>✔ Diseño responsive</li>
+        </ul>
+    </section>
+
+    <!-- SECCIÓN TRABAJOS -->
+    <section id="trabajos">
+        <h2>Nuestros trabajos</h2>
+
+        <div class="trabajos-grid">
+
+            <div class="trabajo-card">
+                <h3>Servicios Técnico Escobar</h3>
+                <p>Página web profesional para servicios técnicos y mantenimiento.</p>
+                <a href="https://servicios-tecnico-escobar.netlify.app/" 
+                   target="_blank" 
+                   class="btn-trabajos">
+                   Ver sitio
+                </a>
+            </div>
+
+            <div class="trabajo-card">
+                <h3>JPR Taller Mecánico</h3>
+                <p>Web comercial para taller mecánico con diseño moderno.</p>
+                <a href="https://jprtallermecanico.netlify.app/" 
+                   target="_blank" 
+                   class="btn-trabajos">
+                   Ver sitio
+                </a>
+            </div>
+
+            <div class="trabajo-card">
+                <h3>Carreras de Karting</h3>
+                <p>Sitio informativo sobre karting y competiciones.</p>
+                <a href="https://carrerasdekarting.netlify.app/" 
+                   target="_blank" 
+                   class="btn-trabajos">
+                   Ver sitio
+                </a>
+            </div>
+
+            <!-- NUEVO TRABAJO AGREGADO -->
+            <div class="trabajo-card">
+                <h3>Carnicería Santa Catalina</h3>
+                <p>Sitio web para negocio de ventas de carne y productos frescos.</p>
+                <a href="https://escobarmaximo272-bot.github.io/carniceria-santa-catalina/" 
+                   target="_blank" 
+                   class="btn-trabajos">
+                   Ver sitio
+                </a>
+            </div>
+
         </div>
+    </section>
 
-        <div class="subtitle">STUDIO · Diseño Web & Digital</div>
-    </header>
+</main>
 
-    <main>
-        <section>
-            <h2>Sobre mí</h2>
-            <p>
-                Soy diseñador de páginas web y creador de <strong>BlackPixel Studio</strong>.
-                Me especializo en desarrollar sitios modernos, rápidos y profesionales,
-                adaptados a cualquier dispositivo. Ayudo a emprendedores y negocios
-                a mejorar su presencia en internet con una imagen sólida y confiable.
-            </p>
-        </section>
+<footer>
+    <h3>Contacto</h3>
+    <div class="contactos">
+        <a href="https://wa.me/5493624726876" target="_blank">WhatsApp</a>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl" target="_blank">Email</a>
+        <!-- INSTAGRAM ACTUALIZADO -->
+        <a href="https://www.instagram.com/blackpixel090/" target="_blank">Instagram</a>
+    </div>
 
-        <section>
-            <h2>Servicios</h2>
-            <ul>
-                <li>✔ Diseño de páginas web</li>
-                <li>✔ Landing pages</li>
-                <li>✔ Páginas para negocios</li>
-                <li>✔ Diseño responsive (celular y PC)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <h3>Contacto</h3>
-        <div class="contactos">
-            <a href="https://wa.me/3624726876" target="_blank">WhatsApp</a>
-            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Email</a>
-            <a href="https://instagram.com/escobar_maxim0" target="_blank">Instagram</a>
-        </div>
-        <p class="copy">© 2025 - BlackPixel Studio</p>
-    </footer>
+    <p class="copy">© 2025 - BlackPixel Studio</p>
+</footer>
 
 </body>
 </html>
